@@ -7,6 +7,7 @@ import 'ahadeth_model.dart';
 
 class AhadethWidget extends StatefulWidget {
 
+
   @override
   State<AhadethWidget> createState() => _AhadethWidgetState();
 }
@@ -14,10 +15,10 @@ class AhadethWidget extends StatefulWidget {
 class _AhadethWidgetState extends State<AhadethWidget> {
   @override
   Widget build(BuildContext context) {
-    if(allAhadeth.isEmpty){
-      loadAhadethFile();
-    }
-    return  Column(
+   if(AllAhadeth.isEmpty){
+     loadAhadethFile();
+   }
+    return Column(
       children: [
         Expanded(
             flex: 1,
@@ -25,38 +26,54 @@ class _AhadethWidgetState extends State<AhadethWidget> {
         Container(
           alignment: Alignment.center,
           width: double.infinity,
-            decoration: BoxDecoration(
-              border: Border.symmetric(horizontal: BorderSide(
-                color:Theme.of(context).primaryColor ,
-                width: 2,
-              ))
-            ),
-            child: Text('الاحاديث',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)),
-        Expanded(
-            flex: 3,
-            child:allAhadeth.isEmpty?CircularProgressIndicator(): ListView.separated(
-            itemBuilder: (context, index) => hadethTitleItem(allAhadeth[index]),
-            separatorBuilder:  (context, index) => Container(
+          decoration: BoxDecoration(
+            border: Border.symmetric(horizontal: BorderSide(
+              color: Theme.of(context).primaryColor,
               width: 2,
-              color: Colors.black,
-            ),
-            itemCount: allAhadeth.length))
+            ))
+          ),
+          child: Text('الاحاديث',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold
+          ),
+          ),
+        ),
+        Expanded(
+          flex: 3,
+            child:AllAhadeth.isEmpty?Center(child: CircularProgressIndicator()):
+            ListView.separated(
+                itemBuilder: (context, index) => HadethTitleItem(AllAhadeth[index]),
+              separatorBuilder: (context, index) {
+                return Container(
+                  width: double.infinity,
+                  height: 2,
+                  margin: EdgeInsets.all(5),
+                  color: Theme.of(context).primaryColor,
+                );
+              },
+                itemCount: AllAhadeth .length,
+            )
+
+        )
       ],
     );
   }
 
-  List<HadethModel>allAhadeth=[];
+  List<HadethModel>AllAhadeth= [];
 
-  //nonblockable
+  //async:nonblockable  ay async func lama tnade 3leha btkon non blockable
   void loadAhadethFile()async{
-    String ahadethContent= await rootBundle.loadString("assets/files/ahadeth.txt"); //blockable : lazm astna lhd mykhls abl mst5dmo
-    List<String> ahadethList=ahadethContent.trim().split("#");   //trim de btshel al msafat al fadya al zyada fe awl al String w akhro
-    for (int i =0 ;i< ahadethList.length;i++){
-      List<String> oneHadeth=ahadethList[i].trim().split('\n');
-      String hadethtitle=oneHadeth[0];  //da al header
-      oneHadeth.removeAt(0);
-      String hadethContent= oneHadeth.join(' '); // byrbot al list kolha bb3dha w ykhleha fe string wahda
-      allAhadeth.add(HadethModel(hadethtitle,hadethContent));
+    String ahadethContent=await rootBundle.loadString('assets/files/ahadeth.txt'); //await blockable
+    List<String>hadethList=ahadethContent.trim().split("#");//h2sm feha kol hadeth lwadho  trim btshel ay msafat fadya
+
+    //h3ml for loop amshe 3ala kol hadeth akhod al title lwahdo w al content lwadho
+    for(int i =0;i <hadethList.length;i++ ){
+        List<String> oneHadeth=hadethList[i].trim().split('\n'); //kda bd2 y2sm al hadeth le lines w awl line al headeer al wahed fe list
+        String hadethTitle= oneHadeth[0]; // w hena 3shan yakhod al title fhowa awl index aw awl str 0
+        oneHadeth.removeAt(0); //fkda adrt ashel al head w ytb2ale al body kolo
+        String headethContent=oneHadeth.join(" "); //zy mfe function bt2sm de function btgm3 kol al LIst fe string wahda yseb msafa fadya ben kol line w al tany
+        AllAhadeth.add( HadethModel(hadethTitle,headethContent)); //ro7t 3mlt list mn no3 class byakhod 2 variable
     }
     setState(() {
 
