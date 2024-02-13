@@ -41,22 +41,20 @@ class _SebhaWidgetState extends State<SebhaWidget> {
               });
 
             },
-            child: AnimatedRotation(
-              turns: turn,
-              duration: Duration(seconds: 1),
-              child: Stack(
+            child: Stack(
 
-                alignment: Alignment.topCenter,
-                children: [
-                  Container(
-                      margin: EdgeInsets.only(left: 40),
-                      child: Image.asset('assets/images/head of seb7a.png',height: 200,width: double.infinity, )),
-                  Container(
-                      margin: EdgeInsets.only(top: 128,),
-                      child: Transform.rotate(
-                          angle: 33 * (3.141592653589793 / 180),
-                          child: Image.asset('assets/images/body of seb7a.png'  ,width: double.infinity,))),],
-              ),
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                    margin: EdgeInsets.only(left: 40),
+                    child: Image.asset('assets/images/head of seb7a.png',height: 200,width: double.infinity, )),
+                Container(
+                    margin: EdgeInsets.only(top: 128,),
+                    child: AnimatedRotation(
+                        turns: turn,
+                        duration: Duration(seconds: 1),
+
+                        child: Image.asset('assets/images/body of seb7a.png'  ,width: double.infinity,))),],
             ),
           ),
         ),
