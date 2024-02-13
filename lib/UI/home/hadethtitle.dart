@@ -12,14 +12,19 @@ class HadethTitleItem extends StatelessWidget {
       onTap: (){
         Navigator.pushNamed(context, HadethDetailsScreen.routeName,arguments: hadeth);
       },
-      child: Text(
-              hadeth.title,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 18,
+      child: Container(
+        alignment: Alignment.center,
+        height: 60,
+        child: Text(
+
+                hadeth.title,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+
+          ),
 
         ),
-
       ),
     );
   }

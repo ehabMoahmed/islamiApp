@@ -15,10 +15,11 @@ class QuranTitleWidget extends StatelessWidget {
          Navigator.pushNamed(context, QuranDetailsScreen.routeName,arguments: QuranDetailsArgs(title,index));
       },
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        
         children: [
-          Text(title,style: TextStyle(fontSize: 24,)),
-          Text(versesNumber,style: TextStyle(fontSize: 24,) )
+          Expanded(child: Container(alignment: Alignment.center,child: Text(title,style: TextStyle(fontSize: 35,)))),
+          Container( width: 2,height: 60,),
+          Expanded(child: Container(alignment:Alignment.center,child: Text(versesNumber,style: TextStyle(fontSize: 30,) )))
         ],
       ),
     );

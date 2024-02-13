@@ -30,6 +30,29 @@ class QuranWidget extends StatelessWidget {
             "assets/images/qur2an_screen_logo.png"
           ),
         ),
+        Divider(
+          color: Theme.of(context).primaryColor,
+          thickness: 2.0, // Adjust the thickness as needed
+          height: 5.0, // Adjust the height as needed
+         // indent: 20.0, // Adjust the left indentation as needed
+         // endIndent: 20.0, // Adjust the right indentation as needed
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+
+          Expanded(child: Container(alignment:Alignment.center,child: Text('اسم السورة',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),))),
+          Expanded(child: Container(alignment:Alignment.center,child: Text('عدد الآيات',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),))),
+        ],  
+        ),
+        Divider(
+          color: Theme.of(context).primaryColor,
+          thickness: 2.0, // Adjust the thickness as needed
+          height: 5.0, // Adjust the height as needed
+         // indent: 20.0, // Adjust the left indentation as needed
+         // endIndent: 20.0, // Adjust the right indentation as needed
+        ),
+        
         Expanded(
           flex: 3,
           child: ListView.separated(
@@ -42,7 +65,7 @@ class QuranWidget extends StatelessWidget {
                   width: double.infinity,
                   height: 2,
                    margin: EdgeInsets.all(5),
-                   color: Theme.of(context).primaryColor,
+                   color: Colors.white60,
                 );
               },
               itemCount:  suraNames.length),

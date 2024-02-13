@@ -24,6 +24,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
             flex: 1,
             child: Image.asset('assets/images/hadeth_logo.png')),
         Container(
+
           alignment: Alignment.center,
           width: double.infinity,
           decoration: BoxDecoration(
@@ -32,9 +33,9 @@ class _AhadethWidgetState extends State<AhadethWidget> {
               width: 2,
             ))
           ),
-          child: Text('الاحاديث',
+          child: Text('الأحاديث',
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 35,
             fontWeight: FontWeight.bold
           ),
           ),
@@ -49,7 +50,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
                   width: double.infinity,
                   height: 2,
                   margin: EdgeInsets.all(5),
-                  color: Theme.of(context).primaryColor,
+                  color: Colors.white60,
                 );
               },
                 itemCount: AllAhadeth .length,

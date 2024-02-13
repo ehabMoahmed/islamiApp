@@ -33,16 +33,13 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
           margin: EdgeInsets.all(20),
           elevation: 10, //shadow
 
-          child: lines.isNotEmpty?ListView.separated(
+          child: lines.isNotEmpty?ListView.builder(
               itemBuilder:  (context, index) => Text(
                   "${lines[index]}(${index+1})",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.black,fontSize: 25),
               textDirection: TextDirection.rtl,
               ),
-              separatorBuilder:(context, index) => Container(
-                height: 2,
-                color: Theme.of(context).primaryColor,
-              ),
+
               itemCount:  lines.length)
               :Center(child: CircularProgressIndicator(),)
         ),
@@ -59,7 +56,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
     String quranText = await rootBundle.loadString(
         'assets/files/${index + 1}.txt'); //future:func unblock of codes btfdl sh8ala w al b3dha msh bystnaha tkhls la bytnfz m3aha
     print(quranText);
-    lines=quranText.split('\n');
+    lines=quranText.trim().split('\n');
     print(lines.length);
     setState(() {
 

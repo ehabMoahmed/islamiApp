@@ -34,7 +34,7 @@ class _homeScreenState extends State<homeScreen> {
          //lazm t3ml kda 3shan howa leh lon abyd khleh shfaf
         appBar: AppBar(
           centerTitle: true,
-          title: Text('اسلامي'),
+          title: Text('إسلامي',style: TextStyle(fontSize: 30)),
         ),
         bottomNavigationBar: BottomNavigationBar(
               currentIndex:currentNavIndex , //eh al item ale t3mlo select
