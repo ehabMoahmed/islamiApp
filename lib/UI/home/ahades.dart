@@ -38,7 +38,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
             fontWeight: FontWeight.bold
           ),
           ),
-        ),
+               ),
         Expanded(
           flex: 3,
             child:AllAhadeth.isEmpty?Center(child: CircularProgressIndicator()):
