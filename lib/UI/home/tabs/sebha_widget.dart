@@ -72,7 +72,7 @@ class _SebhaWidgetState extends State<SebhaWidget> {
                       onPressed:  ()
                       {
                         setState(() {
-                          counter++;
+
 
                         });
 
@@ -95,8 +95,25 @@ class _SebhaWidgetState extends State<SebhaWidget> {
                       )),
 
 
-                  child: Text(' ${ad3ya[currentindex]}',
-                      style: TextStyle(fontSize: 25,color: Colors.white))),
+                  child: GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        turn+=1/34;
+
+                        counter++;
+                        if(counter== 34){
+                          repeat();
+                        }
+                        if(currentindex==ad3ya.length){
+                          currentindex=0;
+
+                        }
+                      });
+
+                    },
+                    child: Text(' ${ad3ya[currentindex]}',
+                        style: TextStyle(fontSize: 25,color: Colors.white)),
+                  )),
             ],
           ),
         ),

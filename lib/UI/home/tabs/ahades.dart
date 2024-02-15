@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamyapp/UI/home/hadethtitle.dart';
 
-import 'ahadeth_model.dart';
+import '../ahadeth_model.dart';
 
 class AhadethWidget extends StatefulWidget {
 

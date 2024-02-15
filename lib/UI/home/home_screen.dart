@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:islamyapp/UI/home/quran_widget.dart';
-import 'package:islamyapp/UI/home/radio.dart';
-import 'package:islamyapp/UI/home/sebha_widget.dart';
+import 'package:islamyapp/UI/home/tabs/quran_widget.dart';
+import 'package:islamyapp/UI/home/tabs/radio.dart';
+import 'package:islamyapp/UI/home/tabs/sebha_widget.dart';
+import 'package:islamyapp/UI/home/tabs/settings.dart';
 
-import 'ahades.dart';
+
+import 'tabs/ahades.dart';
 
 class homeScreen extends StatefulWidget {
   static const String routeName = 'HomeScreen';
@@ -19,6 +21,7 @@ class _homeScreenState extends State<homeScreen> {
     AhadethWidget(),
     SebhaWidget(),
     RadioWidget(),
+    Settings(),
   ];
 
   @override
@@ -66,6 +69,12 @@ class _homeScreenState extends State<homeScreen> {
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 icon: ImageIcon(AssetImage('assets/images/icon_radio.png')),
                 label: "راديو",
+              ),
+
+              BottomNavigationBarItem(
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                icon: Icon(Icons.settings) ,
+                label: "الاعدادات",
               ),
             ]),
 
