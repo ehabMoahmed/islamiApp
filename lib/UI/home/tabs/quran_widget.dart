@@ -31,7 +31,7 @@ class QuranWidget extends StatelessWidget {
           ),
         ),
         Divider(
-          color: Theme.of(context).primaryColor,
+          color: Theme.of(context).dividerColor,
           thickness: 2.0, // Adjust the thickness as needed
           height: 5.0, // Adjust the height as needed
          // indent: 20.0, // Adjust the left indentation as needed
@@ -41,12 +41,12 @@ class QuranWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
 
-          Expanded(child: Container(alignment:Alignment.center,child: Text('اسم السورة',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),))),
-          Expanded(child: Container(alignment:Alignment.center,child: Text('عدد الآيات',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),))),
+          Expanded(child: Container(alignment:Alignment.center,child: Text('اسم السورة',style: Theme.of(context).textTheme.titleLarge))),
+          Expanded(child: Container(alignment:Alignment.center,child: Text('عدد الآيات',  style: Theme.of(context).textTheme.titleLarge))),
         ],  
         ),
         Divider(
-          color: Theme.of(context).primaryColor,
+          color: Theme.of(context).dividerColor,
           thickness: 2.0, // Adjust the thickness as needed
           height: 5.0, // Adjust the height as needed
          // indent: 20.0, // Adjust the left indentation as needed
@@ -65,7 +65,7 @@ class QuranWidget extends StatelessWidget {
                   width: double.infinity,
                   height: 2,
                    margin: EdgeInsets.all(5),
-                   color: Colors.white60,
+                     color: Theme.of(context).dividerColor,
                 );
               },
               itemCount:  suraNames.length),

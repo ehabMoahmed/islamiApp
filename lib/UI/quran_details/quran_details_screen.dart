@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../style/app_theme.dart';
+
 class QuranDetailsScreen extends StatefulWidget {
   static const routeName = 'QuranDetailsScreen';
 
@@ -23,20 +25,19 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                  'assets/images/default_bg.png'), //msh mwgoda fe al theme
+                  AppTheme.isDark? "assets/images/darkbg.png" :'assets/images/default_bg.png'
+              ), //msh mwgoda fe al theme
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
           title: Text(args.title),
         ),
         body: Card(
-          margin: EdgeInsets.all(20),
-          elevation: 10, //shadow
 
           child: lines.isNotEmpty?ListView.builder(
               itemBuilder:  (context, index) => Text(
                   "${lines[index]}(${index+1})",
-                  style: TextStyle(color: Colors.black,fontSize: 25),
+                  style: Theme.of(context).textTheme.bodyMedium,
               textDirection: TextDirection.rtl,
               ),
 

@@ -18,6 +18,7 @@ class _SettingsState extends State<Settings> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 25,),
           Text('Language',style: TextStyle(fontSize: 20),),
           SizedBox(height: 10,),
           InkWell(
@@ -35,7 +36,9 @@ class _SettingsState extends State<Settings> {
                     color: Theme.of(context).colorScheme.primary,
                   )
                 ),
-                child: Text('English',style: TextStyle(fontSize: 16),)),
+                child: Text('English',style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    fontSize: 18
+                ),)),
           ),
           SizedBox(height: 20,),
           Text('Theme',style: TextStyle(fontSize: 20),),
@@ -55,7 +58,9 @@ class _SettingsState extends State<Settings> {
                       color: Theme.of(context).colorScheme.primary,
                     )
                 ),
-                child: Text('Light',style: TextStyle(fontSize: 16),)),
+                child: Text('Light',style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  fontSize: 18
+                ),)),
           ),
 
         ],

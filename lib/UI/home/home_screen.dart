@@ -3,6 +3,7 @@ import 'package:islamyapp/UI/home/tabs/quran_widget.dart';
 import 'package:islamyapp/UI/home/tabs/radio.dart';
 import 'package:islamyapp/UI/home/tabs/sebha_widget.dart';
 import 'package:islamyapp/UI/home/tabs/settings.dart';
+import 'package:islamyapp/style/app_theme.dart';
 
 
 import 'tabs/ahades.dart';
@@ -29,7 +30,9 @@ class _homeScreenState extends State<homeScreen> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/default_bg.png'),//msh mwgoda fe al theme
+              image: AssetImage(
+               AppTheme.isDark? "assets/images/darkbg.png" :'assets/images/default_bg.png'
+              ),//msh mwgoda fe al theme
             fit: BoxFit.fill
       )),
       child: Scaffold(

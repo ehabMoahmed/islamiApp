@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamyapp/style/app_theme.dart';
 
 import 'UI/hadeth-details/hadeth_details_screen.dart';
 import 'UI/home/home_screen.dart';
@@ -19,35 +20,13 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       
-      //by7dd style ymshe 3ala al app kolo
-      theme: ThemeData(
-       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-           backgroundColor: Color( 0xffB7935F) ,//msh hyshtghl de bug
-         selectedItemColor: Colors.black,
-         unselectedItemColor: Colors.white,
-         selectedIconTheme: IconThemeData(size: 32),
-         unselectedIconTheme: IconThemeData(size: 20),
-        ),
+        //by7dd style ymshe 3ala al app kolo
+        theme: AppTheme.lighttheme ,
+        darkTheme:AppTheme.darktheme,
 
-           appBarTheme: AppBarTheme(
-            backgroundColor: Colors.transparent,
-          centerTitle: true,
-          titleTextStyle: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.black),
-        ),
+        //ht7km howa light wala dark
+        themeMode: AppTheme.isDark?ThemeMode.dark:ThemeMode.light,
 
-        scaffoldBackgroundColor: Colors.transparent, //lazm t3ml kda 3shan howa leh lon abyd khleh shfaf
-
-        //al lon al montshr 3ndk fe al application
-            colorScheme: ColorScheme.fromSeed(seedColor: Color( 0xffB7935F),
-              primary: Color( 0xffB7935F)      , //al lon al montshr awy fe al app
-              onPrimary: Colors.white   ,//al lon ale mktob 3ala al lon primary
-              secondary:Color( 0xffB7935F).withOpacity(0.57),     //al lon al montshr a2l mn al primary
-              onSecondary:Colors.black  ,//al lon ale mktob 3ala al lon secondary
-            ),
-
-
-
-      ),
         routes: {
           homeScreen.routeName:(context) => homeScreen(),
           SplashScreen.routeName:(context) => SplashScreen(),

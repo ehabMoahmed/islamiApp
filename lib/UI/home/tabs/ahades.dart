@@ -29,15 +29,12 @@ class _AhadethWidgetState extends State<AhadethWidget> {
           width: double.infinity,
           decoration: BoxDecoration(
             border: Border.symmetric(horizontal: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).dividerColor,
               width: 2,
             ))
           ),
           child: Text('الأحاديث',
-          style: TextStyle(
-            fontSize: 35,
-            fontWeight: FontWeight.bold
-          ),
+          style:  Theme.of(context).textTheme.titleLarge,
           ),
                ),
         Expanded(
@@ -50,7 +47,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
                   width: double.infinity,
                   height: 2,
                   margin: EdgeInsets.all(5),
-                  color: Colors.white60,
+                  color: Theme.of(context).dividerColor,
                 );
               },
                 itemCount: AllAhadeth .length,
