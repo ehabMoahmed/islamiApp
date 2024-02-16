@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
+import '../style/app_theme.dart';
 import 'home/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,6 +16,8 @@ class _SplashScreenState extends State<SplashScreen>
 
 with SingleTickerProviderStateMixin
 {
+
+
 
   @override
   void initState(){
@@ -43,7 +47,8 @@ with SingleTickerProviderStateMixin
 
         width: double.infinity,
         decoration: BoxDecoration(
-image: DecorationImage(image:  AssetImage("assets/images/qur2an_screen_logo.png"),
+image: DecorationImage(image:  AssetImage(
+    AppTheme.isDark?"assets/images/DarkSplash – 1.png":"assets/images/LightSplash.png"),
 
 ),color: Colors.white
         ),
