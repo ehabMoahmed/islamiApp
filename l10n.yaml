@@ -1,0 +1,10 @@
+#hena 3ml file yaml 3n tre2 a3ml file 3ady .yaml
+
+#h3ml file trgma lkol lo8a w al file da ale by7ddlo  by2olo enta 3ndk folder fe al lib asmo kza howa al feh al translate
+arb-dir: lib/l10n
+
+#al file da khodo k reference le ba2e files al targma
+template-arb-file: app_en.arb
+
+#al package de ht3ml file gded ale feh al trgma bta3te w at3mlt 3n tre2 generate
+output-localization-file: app_localizations.dart

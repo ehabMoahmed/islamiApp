@@ -4,7 +4,7 @@ import 'package:islamyapp/UI/home/tabs/radio.dart';
 import 'package:islamyapp/UI/home/tabs/sebha_widget.dart';
 import 'package:islamyapp/UI/home/tabs/settings.dart';
 import 'package:islamyapp/style/app_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'tabs/ahades.dart';
 
@@ -40,7 +40,7 @@ class _homeScreenState extends State<homeScreen> {
          //lazm t3ml kda 3shan howa leh lon abyd khleh shfaf
         appBar: AppBar(
           centerTitle: true,
-          title: Text('إسلامي',style: TextStyle(fontSize: 30)),
+          title: Text( AppLocalizations.of(context)!.islami,style: TextStyle(fontSize: 30)),
         ),
         bottomNavigationBar: BottomNavigationBar(
               currentIndex:currentNavIndex , //eh al item ale t3mlo select
