@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamyapp/UI/home/hadethtitle.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../ahadeth_model.dart';
 
@@ -33,7 +34,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
               width: 2,
             ))
           ),
-          child: Text('الأحاديث',
+          child: Text(AppLocalizations.of(context)!.ahadeth,
           style:  Theme.of(context).textTheme.titleLarge,
           ),
                ),

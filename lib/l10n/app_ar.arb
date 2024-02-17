@@ -1,4 +1,10 @@
 
 {
-   "islami":"اسلامي"
+   "islami":"اسلامي",
+   "quran":"قران",
+   "ahadeth":"احاديث",
+   "settings":"اعدادات",
+   "sebha":"سبحه",
+   "radio":"راديو",
+   "chaptertitle": "اسم السوره"
 }

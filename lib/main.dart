@@ -9,6 +9,7 @@ import 'UI/splashScreen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
+
   runApp(const MyApp());
 }
 
@@ -30,8 +31,8 @@ class MyApp extends StatelessWidget {
 
       //al loghat ale al app byd3mha al local obj feh al iso code bta3 al lo8a english>en  arby>ar
       supportedLocales:[
-        Locale("en"),
-        Locale("ar"),
+        Locale("en"), //english
+        Locale("ar"), //arby 
       ] ,
 
 

@@ -56,28 +56,28 @@ class _homeScreenState extends State<homeScreen> {
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
                   icon: ImageIcon(AssetImage('assets/images/icon_quran.png')),
-                  label: "قران",
+                  label: AppLocalizations.of(context)!.quran,
                 ),
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 icon: ImageIcon(AssetImage('assets/images/icon_hadeth.png')),
-                label: "احاديث",
+                label: AppLocalizations.of(context)!.ahadeth,
               ),
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 icon: ImageIcon(AssetImage('assets/images/icon_sebha.png')),
-                label: " سبحه",
+                label: AppLocalizations.of(context)!.sebha,
               ),
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 icon: ImageIcon(AssetImage('assets/images/icon_radio.png')),
-                label: "راديو",
+                label: AppLocalizations.of(context)!.radio,
               ),
 
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 icon: Icon(Icons.settings) ,
-                label: "الاعدادات",
+                label: AppLocalizations.of(context)!.settings,
               ),
             ]),
 
