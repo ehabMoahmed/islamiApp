@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islamyapp/UI/home/tabs/themesheet.dart';
 import 'package:islamyapp/providers/settings_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'Language_sheet.dart';
 
@@ -22,7 +23,7 @@ class _SettingsState extends State<Settings> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 25,),
-          Text('Language',style: TextStyle(fontSize: 20),),
+          Text(AppLocalizations.of(context)!.language,style: TextStyle(fontSize: 20),),
           SizedBox(height: 10,),
           InkWell(
             onTap: (){
@@ -39,12 +40,12 @@ class _SettingsState extends State<Settings> {
                     color: Theme.of(context).colorScheme.primary,
                   )
                 ),
-                child: Text('English',style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
+                child: Text(provider.language=='en'?'English':"العربيه",style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
                     fontSize: 18
                 ),)),
           ),
           SizedBox(height: 20,),
-          Text('Theme',style: TextStyle(fontSize: 20),),
+          Text(AppLocalizations.of(context)!.theme,style: TextStyle(fontSize: 20),),
           SizedBox(height: 10,),
           InkWell(
             onTap: (){
@@ -61,7 +62,7 @@ class _SettingsState extends State<Settings> {
                       color: Theme.of(context).colorScheme.primary,
                     )
                 ),
-                child: Text(provider.theme==ThemeMode.light?"Light":"Dark",style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
+                child: Text(provider.theme==ThemeMode.light?AppLocalizations.of(context)!.light:AppLocalizations.of(context)!.dark,style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontSize: 18
                 ),)),
           ),

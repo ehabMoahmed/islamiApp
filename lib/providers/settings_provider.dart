@@ -4,10 +4,10 @@
 //ChangeNotifier:ay tghyer hy7sl fe al data hyro7 ynotify al observers
 
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 class SettingProvider extends ChangeNotifier{
 
-  ThemeMode theme=ThemeMode.light;
+  ThemeMode theme=ThemeMode.dark;
 
   //lazm a3ml al func a
     void changeTheme(ThemeMode newThemeMode){
@@ -18,6 +18,12 @@ class SettingProvider extends ChangeNotifier{
       notifyListeners();
     }
 
+    String language='en';
 
+    void changeLnaguage(String newLnaguage){
+      if(language == newLnaguage)return;
+      language= newLnaguage;
+      notifyListeners();
+    }
 
 }

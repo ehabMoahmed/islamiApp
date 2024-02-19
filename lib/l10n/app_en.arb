@@ -1,0 +1,17 @@
+{
+  "islami": "Islami",
+  "quran": "Quran",
+  "ahadeth":"Ahadeth",
+  "sebha": "Sebha",
+  "radio":"Radio",
+  "chaptertitle": "Sura Name",
+  "settings": "Settings",
+  "light": "Light",
+  "dark": "Dark",
+  "theme": "Theme",
+  "language": "Language",
+  "numberofverses": "Verses Number",
+  "radiostation": "Holy Quran radio station",
+  "hymnsnumber" : "hymns number"
+
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RadioWidget extends StatelessWidget {
 
@@ -12,7 +13,7 @@ class RadioWidget extends StatelessWidget {
           padding: const EdgeInsets.only(top: 130),
           child: Image.asset('assets/images/radio.png',width: 412,height: 222),
         ),
-        Text('إذاعة القرآن الكريم',
+        Text( AppLocalizations.of(context)!.radiostation ,
             style: TextStyle(
                     fontWeight: FontWeight.bold,
               fontSize: 25,

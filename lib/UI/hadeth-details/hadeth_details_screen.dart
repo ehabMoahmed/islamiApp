@@ -30,7 +30,6 @@ class HadethDetailsScreen extends StatelessWidget {
             Expanded(
               child: Card(
 
-              
                   child:SingleChildScrollView(
                     child: Text(
                       hadethModel.content,

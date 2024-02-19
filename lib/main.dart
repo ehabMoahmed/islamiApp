@@ -7,7 +7,8 @@ import 'UI/hadeth-details/hadeth_details_screen.dart';
 import 'UI/home/home_screen.dart';
 import 'UI/quran_details/quran_details_screen.dart';
 import 'UI/splashScreen.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() {
   runApp(ChangeNotifierProvider(
 
@@ -27,6 +28,19 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
 
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('ar'), //
+      ],
+
+      locale: Locale(provider.language),
+      
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       

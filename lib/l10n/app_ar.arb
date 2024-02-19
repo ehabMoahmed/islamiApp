@@ -1,0 +1,17 @@
+{
+  "islami": "اسلامي",
+  "quran": "قرآن",
+  "ahadeth":"أحاديث",
+  "sebha": "سبحة",
+  "radio":"راديو",
+  "chaptertitle": "اسم السورة",
+  "settings": "اعدادات",
+  "light": "مضئ",
+  "dark": "مظلم",
+  "theme": "السمه",
+  "language": "اللغة",
+  "numberofverses": "عدد الآيات",
+  "radiostation": "إذاعة القرآن الكريم",
+  "hymnsnumber" : "عدد التسبيحات"
+
+}

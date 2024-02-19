@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SebhaWidget extends StatefulWidget {
   @override
@@ -63,7 +64,7 @@ class _SebhaWidgetState extends State<SebhaWidget> {
           child: Column(
             children: [
               SizedBox(height: 30,),
-              Text('عدد التسبيحات',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30)),
+              Text( AppLocalizations.of(context)!.hymnsnumber,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30)),
               SizedBox(height: 20,),
               Container(
 

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../providers/settings_provider.dart';
 
@@ -19,7 +20,7 @@ class _ThemeSheetState extends State<ThemeSheet> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          getSelectedItem( provider.theme==ThemeMode.dark?"Dark":'Lights'),
+          getSelectedItem( provider.theme==ThemeMode.dark?AppLocalizations.of(context)!.dark:AppLocalizations.of(context)!.light),
           SizedBox(height: 15,),
           InkWell(
               onTap: (){
@@ -27,7 +28,7 @@ class _ThemeSheetState extends State<ThemeSheet> {
                 provider.changeTheme( provider.theme==ThemeMode.dark?ThemeMode.light:ThemeMode.dark);
               },
               child: getUnselectedItem(
-                 provider.theme==ThemeMode.dark?"Light":"Dark" )), //b3ks
+                 provider.theme==ThemeMode.dark?AppLocalizations.of(context)!.light:AppLocalizations.of(context)!.dark )), //b3ks
         ],
       ),
     );
