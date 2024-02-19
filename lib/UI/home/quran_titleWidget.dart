@@ -18,7 +18,9 @@ class QuranTitleWidget extends StatelessWidget {
         
         children: [
           Expanded(child: Container(alignment: Alignment.center,child: Text(title,style:Theme.of(context).textTheme.labelMedium ))),
-          Container( width: 2,height: 60,),
+          Container( width: 2,height: 66,decoration: BoxDecoration(
+            color: Theme.of(context).dividerColor,
+          )),
           Expanded(child: Container(alignment:Alignment.center,child: Text(versesNumber,style:Theme.of(context).textTheme.labelMedium  )))
         ],
       ),

@@ -6,7 +6,7 @@ class AppTheme{
   static Color lightPrimary=Color( 0xffB7935F) ; //law bst5dm al color da fe kza mkan a3ml fe variable ahsn
   static Color darkPrimary=Color( 0xff141A2E) ;
 
-  static Color darksecondary=Color( 0xffB7935F) ;
+  static Color darksecondary=Color( 0xffFACC1D) ;
 
   //htet al etnen fe class 3shan mkbrsh file al main
 

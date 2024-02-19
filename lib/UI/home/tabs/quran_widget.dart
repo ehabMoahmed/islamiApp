@@ -31,46 +31,62 @@ class QuranWidget extends StatelessWidget {
             "assets/images/qur2an_screen_logo.png"
           ),
         ),
-        Divider(
-          color: Theme.of(context).dividerColor,
-          thickness: 2.0, // Adjust the thickness as needed
-          height: 5.0, // Adjust the height as needed
-         // indent: 20.0, // Adjust the left indentation as needed
-         // endIndent: 20.0, // Adjust the right indentation as needed
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-
-          Expanded(child: Container(alignment:Alignment.center,child: Text(AppLocalizations.of(context)!.chaptertitle,style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 30)))),
-          Expanded(child: Container(alignment:Alignment.center,child: Text(AppLocalizations.of(context)!.numberofverses,  style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize:  25)))),
-        ],  
-        ),
-        Divider(
-          color: Theme.of(context).dividerColor,
-          thickness: 2.0, // Adjust the thickness as needed
-          height: 5.0, // Adjust the height as needed
-         // indent: 20.0, // Adjust the left indentation as needed
-         // endIndent: 20.0, // Adjust the right indentation as needed
-        ),
-        
         Expanded(
           flex: 3,
-          child: ListView.separated(
-            padding: EdgeInsets.all(10),
-              itemBuilder:  (context, index) {
-                return QuranTitleWidget(title: suraNames[index],versesNumber:versesNumber[index].toString() ,index: index,);
-              },
-              separatorBuilder: (context, index){
-                 return Container(
-                  width: double.infinity,
-                  height: 2,
-                   margin: EdgeInsets.all(5),
-                     color: Theme.of(context).dividerColor,
-                );
-              },
-              itemCount:  suraNames.length),
+          child: Stack(
+
+            alignment: Alignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Container(
+
+                  color: Theme.of(context).dividerColor,
+                  width: 2,
+                ),
+              ),
+              Column(
+                children: [
+                  Divider(
+                    color: Theme.of(context).dividerColor,
+                    thickness: 2.0, // Adjust the thickness as needed
+                    height: 5.0, // Adjust the height as needed
+                    // indent: 20.0, // Adjust the left indentation as needed
+                    // endIndent: 20.0, // Adjust the right indentation as needed
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+
+                      Expanded(child: Container(alignment:Alignment.center,child: Text(AppLocalizations.of(context)!.chaptertitle,style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 30)))),
+                      Container(width: 2,height: 42,decoration: BoxDecoration(color: Theme.of(context).dividerColor)),
+                      Expanded(child: Container(alignment:Alignment.center,child: Text(AppLocalizations.of(context)!.numberofverses,  style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize:  25)))),
+                    ],
+                  ),
+                  Divider(
+                    color: Theme.of(context).dividerColor,
+                    thickness: 2.0, // Adjust the thickness as needed
+                    height: 5.0, // Adjust the height as needed
+                    // indent: 20.0, // Adjust the left indentation as needed
+                    // endIndent: 20.0, // Adjust the right indentation as needed
+                  ),
+
+                  Expanded(
+                    flex: 3,
+                    child: ListView.builder(
+                        padding: EdgeInsets.all(10),
+                        itemBuilder:  (context, index) {
+                          return QuranTitleWidget(title: suraNames[index],versesNumber:versesNumber[index].toString() ,index: index,);
+                        },
+
+                        itemCount:  suraNames.length),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
+
       ],
     );
   }
