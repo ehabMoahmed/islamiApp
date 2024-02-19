@@ -41,7 +41,9 @@ class _SettingsState extends State<Settings> {
                   )
                 ),
                 child: Text(provider.language=='en'?'English':"العربيه",style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontSize: 18
+                    fontSize: 18,
+                  color: Colors.black
+
                 ),)),
           ),
           SizedBox(height: 20,),
@@ -63,7 +65,8 @@ class _SettingsState extends State<Settings> {
                     )
                 ),
                 child: Text(provider.theme==ThemeMode.light?AppLocalizations.of(context)!.light:AppLocalizations.of(context)!.dark,style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  fontSize: 18
+                  fontSize: 18,
+                    color: Colors.black
                 ),)),
           ),
 

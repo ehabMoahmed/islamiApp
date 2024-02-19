@@ -48,7 +48,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
                   width: double.infinity,
                   height: 2,
                   margin: EdgeInsets.all(5),
-                  color: Theme.of(context).dividerColor,
+
                 );
               },
                 itemCount: AllAhadeth .length,

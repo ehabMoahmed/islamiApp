@@ -15,6 +15,7 @@ class RadioWidget extends StatelessWidget {
         ),
         Text( AppLocalizations.of(context)!.radiostation ,
             style: TextStyle(
+              color: Theme.of(context).colorScheme.onPrimary,
                     fontWeight: FontWeight.bold,
               fontSize: 25,
         )),
@@ -24,15 +25,17 @@ class RadioWidget extends StatelessWidget {
           children: [
             InkWell(
                 onTap: (){},
-                child: Image.asset('assets/images/Icon metro-next (1).png')),
+                child: Image.asset('assets/images/Icon metro-next (1).png',color: Theme.of(context).dividerColor,
+
+                )),
             SizedBox(width: 50),
             InkWell(
                 onTap: (){},
-                child: Image.asset('assets/images/Icon awesome-play.png')),
+                child: Image.asset('assets/images/Icon awesome-play.png',color: Theme.of(context).dividerColor)),
             SizedBox(width: 50),
             InkWell(
                 onTap: (){},
-                child: Image.asset('assets/images/Icon metro-next.png')),
+                child: Image.asset('assets/images/Icon metro-next.png',color: Theme.of(context).dividerColor)),
 
         ],),
       ],
