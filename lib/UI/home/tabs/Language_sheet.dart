@@ -24,6 +24,7 @@ class _LanguageSheetState extends State<LanguageSheet> {
           InkWell(
               onTap: (){
                 Navigator.pop(context);
+
                 provider.changeLnaguage( provider.language=="ar"?"en":"ar" );
               },
               child: getUnselectedItem(provider.language=="ar"?'English':'العربيه')),

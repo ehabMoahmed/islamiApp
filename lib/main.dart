@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamyapp/cache/cacheHelper.dart';
 import 'package:islamyapp/providers/settings_provider.dart';
 import 'package:islamyapp/style/app_theme.dart';
 import 'package:provider/provider.dart';
@@ -9,11 +10,13 @@ import 'UI/quran_details/quran_details_screen.dart';
 import 'UI/splashScreen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-void main() {
-  runApp(ChangeNotifierProvider(
+import 'package:shared_preferences/shared_preferences.dart';
+  Future<void>  main() async {
+WidgetsFlutterBinding.ensureInitialized();
 
+  runApp(ChangeNotifierProvider(
       //law 3ayz observer y listner 3leh hst5dm al obj da
-      create:  (context) => SettingProvider(),
+      create:  (context) => SettingProvider() ,
       child: const MyApp()));
 }
 
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
         Locale('ar'), //
       ],
 
-      locale: Locale(provider.language),
+      locale: Locale(CacheData.getData(key:"languagee")??"en"),
       
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,

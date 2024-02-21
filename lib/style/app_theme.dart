@@ -42,6 +42,7 @@ class AppTheme{
       onPrimary: Colors.white   ,//al lon ale mktob 3ala al lon primary
       secondary:Color( 0xffB7935F).withOpacity(0.57),     //al lon al montshr a2l mn al primary
       onSecondary:Colors.black  ,//al lon ale mktob 3ala al lon secondary
+      tertiary: Colors.black,
     ),
 
     dividerColor: lightPrimary,
@@ -127,6 +128,7 @@ class AppTheme{
       onPrimary: Colors.white   ,//al lon ale mktob 3ala al lon primary
       secondary:darksecondary ,     //al lon al montshr a2l mn al primary
       onSecondary:Colors.black  ,//al lon ale mktob 3ala al lon secondary
+      tertiary: Colors.white,
 
     ),
 

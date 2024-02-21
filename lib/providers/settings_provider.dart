@@ -4,7 +4,7 @@
 //ChangeNotifier:ay tghyer hy7sl fe al data hyro7 ynotify al observers
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:islamyapp/cache/cacheHelper.dart';
 class SettingProvider extends ChangeNotifier{
 
   ThemeMode theme=ThemeMode.dark;
@@ -19,10 +19,18 @@ class SettingProvider extends ChangeNotifier{
     }
 
     String language='en';
+ /* void init(){
+    language = CacheData.getData(key:"languagee")??"en";
+    notifyListeners();
+  }*/
 
     void changeLnaguage(String newLnaguage){
+
       if(language == newLnaguage)return;
       language= newLnaguage;
+
+     // CacheData.setData(key:'languagee', value: language);
+
       notifyListeners();
     }
 

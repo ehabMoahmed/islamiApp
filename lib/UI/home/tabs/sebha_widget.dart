@@ -71,7 +71,7 @@ class _SebhaWidgetState extends State<SebhaWidget> {
             children: [
               SizedBox(height: 30,),
               Text( AppLocalizations.of(context)!.hymnsnumber,style: TextStyle(
-                  color: Theme.of(context).colorScheme.onPrimary,
+                  color: Theme.of(context).colorScheme.tertiary,
                   fontWeight: FontWeight.bold,fontSize: 30)),
               SizedBox(height: 20,),
               Container(
