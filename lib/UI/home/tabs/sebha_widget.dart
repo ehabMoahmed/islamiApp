@@ -56,7 +56,7 @@ class _SebhaWidgetState extends State<SebhaWidget> {
                       provider.theme==ThemeMode.light?'assets/images/head of seb7a.png':"assets/images/head of seb7a dark.png",
                       height: 200,width: double.infinity, )),
                 Container(
-                    margin: EdgeInsets.only(top: 128,),
+                    margin: EdgeInsets.only(top: 110,),
                     child: AnimatedRotation(
                         turns: turn,
                         duration: Duration(seconds: 1),

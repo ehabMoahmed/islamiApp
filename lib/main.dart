@@ -12,11 +12,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
   Future<void>  main() async {
-WidgetsFlutterBinding.ensureInitialized();
+    WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
 
   runApp(ChangeNotifierProvider(
       //law 3ayz observer y listner 3leh hst5dm al obj da
-      create:  (context) => SettingProvider() ,
+      create:  (context) => SettingProvider(
+
+      )..init() ,
       child: const MyApp()));
 }
 
@@ -42,7 +45,7 @@ class MyApp extends StatelessWidget {
         Locale('ar'), //
       ],
 
-      locale: Locale(CacheData.getData(key:"languagee")??"en"),
+      locale: Locale(provider.language),
       
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
