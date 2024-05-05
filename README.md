@@ -1,16 +1,21 @@
-# islamyapp
+Hi,i am very glad that i have completed this application in my journey to learn flutter as part of the course offered by Route Academy.
 
-A new Flutter project.
+The application is an Islamic religious application that includes 4 parts
 
-## Getting Started
+-The Holy Qur'an
 
-This project is a starting point for a Flutter application.
+-the Hadith
 
-A few resources to get you started if this is your first Flutter project:
+-sebha
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+-Radio
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This application abled me to learn about
+
+-splash screen
+
+-localizations
+
+-state management (provider)
+
+-theming
